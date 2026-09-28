@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>财务单据智能风险审核</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark">FR</span><div><strong>财务风险审核</strong><small>Financial Review Control</small></div></div>
+    <div class="header-actions"><label class="user-switch">SSO 用户 <select id="userSelect"><option value="applicant@example.com">林申请 · 申请人</option><option value="reviewer@example.com">周初审 · 财务初审</option><option value="approver@example.com">陈审批 · 审批人</option><option value="admin@example.com">系统管理员</option><option value="auditor@example.com">审计只读</option></select></label><span id="connection" class="status-dot">在线</span></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-label">工作区</div>
+      <button class="nav active" data-view="dashboard"><span>▦</span>风险总览</button>
+      <button class="nav" data-view="documents"><span>▤</span>单据台账</button>
+      <button class="nav" data-view="workbench"><span>◫</span>智能审核工作台</button>
+      <button class="nav" data-view="reports"><span>▥</span>报告与审计</button>
+      <div class="side-label">管理</div>
+      <button class="nav" data-view="config"><span>⚙</span>规则与标准</button>
+      <div class="sidebar-foot"><span class="secure">●</span>审计日志追加写入<br><small>规则版本 rules-v1.0</small></div>
+    </aside>
+    <main class="main" id="app"></main>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
